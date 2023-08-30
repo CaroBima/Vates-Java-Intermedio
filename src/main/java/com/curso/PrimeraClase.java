@@ -9,5 +9,6 @@ public class PrimeraClase {
 
     public int suma(){
         return 2+3;
+
     }
 }
