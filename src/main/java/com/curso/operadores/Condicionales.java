@@ -45,6 +45,7 @@ public class Condicionales {
         return sumaDivisores;
     }
 
+
     /**Calcular el factorial desde 1 al nro ingresado por el usuario
      *
      */
