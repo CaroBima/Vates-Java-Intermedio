@@ -5,14 +5,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-/*
--Desarrolla un programa que simule un cajero automático. Permite al usuario realizar  depósitos, retiros y
-consultar su saldo. Lleva un registro de las transacciones.
-
-- Crea un juego de adivinanza donde la computadora elige una palabra al azar y muestra una serie de guiones
-bajos representando las letras. El jugador debe adivinar la palabra letra por letra.
-
-- Escribe un programa que genere una tabla de multiplicar del 1 al 10 para un número ingresado por el usuario.
+/**
+*-Desarrolla un programa que simule un cajero automático. Permite al usuario realizar  depósitos, retiros y
+*consultar su saldo. Lleva un registro de las transacciones.
+*
+*- Escribe un programa que genere una tabla de multiplicar del 1 al 10 para un número ingresado por el usuario.
  */
 
 

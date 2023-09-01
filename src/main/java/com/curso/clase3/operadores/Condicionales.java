@@ -1,6 +1,5 @@
-package com.curso.operadores;
+package com.curso.clase3.operadores;
 
-import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 

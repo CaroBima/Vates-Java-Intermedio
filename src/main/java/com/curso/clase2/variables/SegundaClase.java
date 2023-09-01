@@ -1,4 +1,4 @@
-package com.curso.variables;
+package com.curso.clase2.variables;
 
 import java.util.Scanner;
 
