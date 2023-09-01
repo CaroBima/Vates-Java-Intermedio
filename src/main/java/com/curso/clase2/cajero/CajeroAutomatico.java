@@ -38,23 +38,19 @@ public class CajeroAutomatico {
                         System.out.println(" No se registraron depósitos en su cuenta.");
                         System.out.println("******************************************");
                     }
-                    menuSeleccion(scanner);
                     break;
                 case 2:
                     depositar(scanner);
-                    menuSeleccion(scanner);
                     break;
                 case 3:
                     System.out.println("******************************************");
                     System.out.println("               Retiro de money");
                     System.out.println("******************************************");
-                    menuSeleccion(scanner);
                     break;
                 case 4:
                     System.out.println("******************************************");
                     System.out.println("         Consulta de transacciones");
                     System.out.println("******************************************");
-                    menuSeleccion(scanner);
                     break;
                 case 5:
                     System.out.println("******************************************");
@@ -64,7 +60,6 @@ public class CajeroAutomatico {
                     System.exit(0);
                     break;
             }
-            scanner.next();
         }while(opcionElegida != 5);
 
     }
@@ -88,7 +83,7 @@ public class CajeroAutomatico {
                 break; // Salir del bucle si se ingresa un valor double
             } else {
                 System.out.println("Entrada no válida. Inténtalo de nuevo.");
-                scanner.next(); // Limpiar el búfer de entrada
+                //scanner.next(); // Limpiar el búfer de entrada
             }
         }
 
@@ -134,7 +129,7 @@ public class CajeroAutomatico {
                 }
             } else {
                 System.out.println("No es un valor numérico válido. Inténtalo de nuevo.");
-                scanner.next(); // Limpiar el búfer de entrada
+                //scanner.next(); // Limpiar el búfer de entrada
             }
         }
 
