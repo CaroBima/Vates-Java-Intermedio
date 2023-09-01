@@ -17,7 +17,7 @@ bajos representando las letras. El jugador debe adivinar la palabra letra por le
 
 
 public class CajeroAutomatico {
-    private static List<Cuenta> cuenta = new ArrayList<>();
+    private static List<Cuenta> movimientosCuenta = new ArrayList<>();
 
     public static void main(String[] args) {
         List<Cuenta> cuenta = new ArrayList<>();
@@ -32,7 +32,7 @@ public class CajeroAutomatico {
             switch (opcionElegida) {
                 case 1:
                     if (cuenta.size() != 0) {
-                        System.out.println("Saldo:" + cuenta.get(cuenta.size()-1).getTotalCuenta());
+                        System.out.println("Saldo: " + cuenta.get(cuenta.size()-1).getTotalCuenta());
                     } else {
                         System.out.println("******************************************");
                         System.out.println(" No se registraron depósitos en su cuenta.");
@@ -48,9 +48,7 @@ public class CajeroAutomatico {
                     System.out.println("******************************************");
                     break;
                 case 4:
-                    System.out.println("******************************************");
-                    System.out.println("         Consulta de transacciones");
-                    System.out.println("******************************************");
+                    mostrarTransacciones();
                     break;
                 case 5:
                     System.out.println("******************************************");
@@ -72,9 +70,6 @@ public class CajeroAutomatico {
         Cuenta nuevoDeposito = new Cuenta();
         Double importe = 0.0;
 
-
-        boolean entradaValida = false;
-
         System.out.print("Importe a depositar:");
 
         while (true) {
@@ -88,22 +83,37 @@ public class CajeroAutomatico {
         }
 
         System.out.println(importe);
-        nuevoDeposito.setIdTransaccion(cuenta.size());
+        nuevoDeposito.setIdTransaccion(movimientosCuenta.size());
         nuevoDeposito.setImporteTransaccion(importe);
         nuevoDeposito.setFechaTransaccion(new Date());
-        if(cuenta.size()>0){
-            nuevoDeposito.setTotalCuenta(cuenta.get(cuenta.size()-1).getTotalCuenta() + importe);
+        if(movimientosCuenta.size()>0){
+            nuevoDeposito.setTotalCuenta(movimientosCuenta.get(movimientosCuenta.size()-1).getTotalCuenta() + importe);
         }else{
-            nuevoDeposito.setTotalCuenta(importe);//si es 0 es el primer registro
+            nuevoDeposito.setTotalCuenta(importe); //si es 0 es el primer registro y no hay total para sumar
         }
         nuevoDeposito.setTipoTransacción("Depósito");
 
-        cuenta.add(nuevoDeposito);
+        movimientosCuenta.add(nuevoDeposito);
         System.out.println("Se añadieron $" + importe);
         System.out.println("Total en la cuenta: $"+ nuevoDeposito.getTotalCuenta());
 
+
+
     }
 
+    private static void mostrarTransacciones(){
+        System.out.println("******************************************");
+        System.out.println("         Consulta de transacciones");
+        System.out.println("******************************************");
+        for (Cuenta cuentaMov : movimientosCuenta) {
+            System.out.println("Id de transacción: " + cuentaMov.getIdTransaccion());
+            System.out.println("Fecha: " + cuentaMov.getFechaTransaccion());
+            System.out.println("Tipo: " + cuentaMov.getTipoTransacción());
+            System.out.println("Importe transacción: " + cuentaMov.getImporteTransaccion());
+            System.out.println("Total disponible: " + cuentaMov.getTotalCuenta());
+            System.out.println("******************************************");
+        }
+    }
 
     /**Muestra el menú de y permite el ingreso de una opción
      *
@@ -132,7 +142,6 @@ public class CajeroAutomatico {
                 //scanner.next(); // Limpiar el búfer de entrada
             }
         }
-
         return opcionElegida;
     }
 }
