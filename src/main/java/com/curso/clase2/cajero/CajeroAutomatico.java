@@ -9,7 +9,7 @@ import java.util.Scanner;
 *-Desarrolla un programa que simule un cajero automático. Permite al usuario realizar  depósitos, retiros y
 *consultar su saldo. Lleva un registro de las transacciones.
 *
-*- Escribe un programa que genere una tabla de multiplicar del 1 al 10 para un número ingresado por el usuario.
+
  */
 
 
