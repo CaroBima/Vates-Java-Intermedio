@@ -1,7 +1,4 @@
-package com.curso.clases.objetos;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.curso.clase4.clases.objetos;
 
 public class Principal {
     public static void main(String[] args) {

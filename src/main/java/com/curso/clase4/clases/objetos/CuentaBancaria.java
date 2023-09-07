@@ -1,4 +1,4 @@
-package com.curso.clases.objetos;
+package com.curso.clase4.clases.objetos;
 
 public class CuentaBancaria {
     private Integer numeroCuenta;

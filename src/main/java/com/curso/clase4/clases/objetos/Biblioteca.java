@@ -1,4 +1,4 @@
-package com.curso.clases.objetos;
+package com.curso.clase4.clases.objetos;
 
 import java.util.ArrayList;
 import java.util.List;

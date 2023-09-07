@@ -1,4 +1,4 @@
-package com.curso.modelo;
+package com.curso.clase2.modelo;
 
 public class Persona {
     //nombre edad genero apellido email dni

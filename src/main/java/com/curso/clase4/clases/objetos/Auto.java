@@ -1,4 +1,4 @@
-package com.curso.clases.objetos;
+package com.curso.clase4.clases.objetos;
 
 public class Auto {
     private String nombre = new String("Hola"); // va al constructor de la clase String y crea el objeto

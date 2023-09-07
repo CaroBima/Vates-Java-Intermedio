@@ -1,4 +1,4 @@
-package com.curso;
+package com.curso.clase1;
 
 public class PrimeraClase {
 
