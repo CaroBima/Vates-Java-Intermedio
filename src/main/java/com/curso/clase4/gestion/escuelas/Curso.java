@@ -1,5 +1,6 @@
 package com.curso.clase4.gestion.escuelas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ import java.util.List;
 public class Curso {
     private String nombre;
     private Profesor profesor;
-    private List<Estudiante> estudiantesInscritos;
+    private List<Estudiante> estudiantesInscritos = new ArrayList<>();
 
     /**
      * agrega un estudiante al curso.
@@ -52,12 +53,12 @@ public class Curso {
     }
 
     //constructores
-    public void Curso(String nombre, Profesor profesor){
+    public Curso(String nombre, Profesor profesor){
         this.nombre = nombre;
         this.profesor = profesor;
     }
 
-    public void Curso(){}
+    public Curso(){}
 
     public Curso(String nombre, Profesor profesor, List<Estudiante> estuiantesInscritos) {
         this.nombre = nombre;

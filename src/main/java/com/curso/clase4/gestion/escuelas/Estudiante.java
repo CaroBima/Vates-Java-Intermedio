@@ -2,6 +2,7 @@ package com.curso.clase4.gestion.escuelas;
 
 import com.sun.security.jgss.GSSUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,21 +19,16 @@ import java.util.List;
 public class Estudiante {
     private String nombre;
     private Integer edad;
-    private List<Curso> cursosInscritos;
+    private List<Curso> cursosInscritos = new ArrayList<>();
 
 
     /**
      * Método inscribirCurso(Curso curso) que inscribe al estudiante en un curso.
      * @param curso
-     * @return boolean
+     *
      */
-    public boolean inscribirCurso(Curso curso){
-        if(curso !=null) {
-            cursosInscritos.add(curso);
-            return true;
-        }else{
-            return false;
-        }
+    public void inscribirCurso(Curso curso){
+       this.cursosInscritos.add(curso);
     }
 
     /**
@@ -46,12 +42,12 @@ public class Estudiante {
     }
 
     //Constructores
-    public void Estudiante(String nombre, int edad) {
+    public Estudiante(String nombre, Integer edad) {
         this.nombre = nombre;
         this.edad = edad;
     }
 
-    public void Estudiante() {}
+    public Estudiante() {}
 
     public Estudiante(String nombre, Integer edad, List<Curso> cursosInscritos) {
         this.nombre = nombre;
