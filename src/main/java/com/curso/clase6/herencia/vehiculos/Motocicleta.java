@@ -18,4 +18,10 @@ public class Motocicleta extends Vehiculo{
         this.cilindrada = cilindrada;
         this.motor = "Dos tiempos";
     }
+
+
+    @Override
+    public double calcularImpuestos(double valorBase){
+        return valorBase * 0.05;
+    }
 }

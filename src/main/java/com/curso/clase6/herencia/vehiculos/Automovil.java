@@ -18,4 +18,9 @@ public class Automovil extends Vehiculo{
         this.motor = "Combustión interna";
         this.cantPuertas = cantPuertas;
     }
+
+    @Override
+    public double calcularImpuestos(double valorBase){
+        return valorBase * 0.25;
+    }
 }

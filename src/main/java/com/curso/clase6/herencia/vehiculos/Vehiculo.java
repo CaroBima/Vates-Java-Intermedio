@@ -13,4 +13,8 @@ public class Vehiculo {
     public String obtenerTipoMotor(){
         return null;
     }
+
+    public double calcularImpuestos(double valorBase){
+        return 0.0;
+    }
 }

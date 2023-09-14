@@ -20,4 +20,10 @@ public class Camion extends Vehiculo{
         this.capacidadCarga = capacidadCarga;
         this.motor = "Motor tipo camion";
     }
+
+
+    @Override
+    public double calcularImpuestos(double valorBase){
+        return valorBase * 0.5;
+    }
 }
