@@ -12,12 +12,11 @@ public class ClaseDeEjemplo {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
-        /*Suma los pares
+        /*Suma los pares sin utilizar lambdas
         for (int i= 0; i <= numeros.size(); i++){
             if(numeros[i] %2 == 0) {
             //logica para sumar los pares
             }
-
         }*/
 
         // ************************  Funciones lambda usando streams  **************************
@@ -29,12 +28,10 @@ public class ClaseDeEjemplo {
 
         System.out.println("La suma es de pares es: " + sumaDePares);
 
-
         //guardar los valores pares en otro arreglo
         List<Integer> numerosPares = numeros.stream()
                 .filter(n -> n % 2 == 0) //filtra los pares
                 .collect(Collectors.toList()); //guarda el resultado del filter en una lista
-
 
 
         //Function, declarado fuera del main
@@ -51,5 +48,4 @@ public class ClaseDeEjemplo {
         System.out.println("El factorial de " + numero + " es: " + res);
 
     }
-
 }
