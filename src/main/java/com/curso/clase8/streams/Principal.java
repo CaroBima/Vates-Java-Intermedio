@@ -71,7 +71,7 @@ public class Principal {
 
 
         //ejercicio:
-        List<Integer> numeros = Arrays.asList(1,2,3,4,5, 7,8,9,10, 1, 3, 4, 8, 6);
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 7, 8, 9, 10, 1, 3, 4, 8, 6);
         List<Integer> numerosParesXDos = numeros.stream()
                 .filter(numero -> numero % 2 == 0)
                 .map(n -> n*2)
