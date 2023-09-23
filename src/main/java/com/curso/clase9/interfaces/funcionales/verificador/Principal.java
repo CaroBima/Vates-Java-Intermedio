@@ -18,12 +18,13 @@ public class Principal {
         Verificador esPar = (a -> a%2 == 0); //ejemplo 1 y 2
         Verificador esImpar = (a -> a%2 != 0); //ejemplo 1 y 2
 
-
     //Ejemplo 1
         int a = 5;
-        System.out.println(esPar.verificar(a) ? a + " es par" : a + " es impar");
+        System.out.println(esPar.verificar(a) ? a + " es par" : a + " es impar"); //con operadores ternarios
 
-        /*if(esPar.verificar(a)){
+        /*
+        //Sin operador ternario
+        if(esPar.verificar(a)){
             System.out.println("Par");
         }else {
             System.out.println("Impar");
