@@ -1,6 +1,39 @@
 # Vates-Java-Intermedio
 Repositorio del curso de Java Intermedio realizado en Vates, dictado por Luis Soto (Decode Programación)
 
+## Temario
+### Módulo I: Reforzando Fundamentos y Practicando en Java
+1. Repaso de Programación Orientada a Objetos (POO) con ejercicios
+2. Uso avanzado de variables y tipos de datos
+3. Operadores y control de flujo con ejemplos prácticos
+4. Trabajo con clases y objetos: ejercicios de aplicación
+5. Métodos constructores y sobrecarga: ejemplos y práctica
+6. Herencia y relaciones de clases en ejercicios
+### Módulo II: Dominando la Programación en Java 8
+1. Introducción a las características de Java 8 (streams, lambdas, etc.)
+2. Uso de expresiones lambda en aplicaciones prácticas
+3. Trabajo con Streams y operaciones de colecciones
+4. Aplicación de interfaces funcionales en ej
+5. Uso de API de fecha y tiempo en Java 8
+### Módulo III: Optimización y Prácticas Avanzadas
+1. Utilización de colecciones avanzadas: Listas, conjuntos y mapas
+2. Implementación de algoritmos de búsqueda y ordenación
+3. Mejora de código y prácticas de limpieza
+4. Manejo avanzado de excepciones y estrategias de manejo
+5. Uso de Java Collections Framework en ejercicios
+### Módulo IV: Construyendo Aplicaciones Prácticas con Spring Boot
+1. Introducción a Spring Boot y sus ventajas
+2. Creación de proyectos Spring Boot y configuración básica
+3. Desarrollo de controladores y endpoints REST
+4. Uso de anotaciones como @RequestMapping y @RestController
+5. Manejo de peticiones HTTP con Spring MVC
+### Módulo V: Conectando con el Mundo Exterior usando Spring Boot
+1. Uso de Spring Data para interactuar con bases de datos
+2. Introducción a la lectura y escritura en bases de datos con JPA
+3. Interacción con APIs externas a través de llamadas HTTP
+4. Uso de librerías externas y manejo de dependencias en Spring Boot
+5. Creación de aplicaciones prácticas utilizando Spring Boot y conectividad externa
+
 ## Ejercicios:
 
 | Clase|                                                          Solicitado                                                  |                                                                                                Solución                                                                                         |
@@ -13,3 +46,7 @@ Repositorio del curso de Java Intermedio realizado en Vates, dictado por Luis So
 | 7 | Gestión de Empleados</br>Crea una clase Empleado con las siguientes propiedades: nombre, salario base mensual, y un método calcularSalarioMensual() que devuelve el salario base. Luego, crea dos subclases de Empleado: Gerente y Vendedor. </br>Para la clase Gerente, agrega las propiedades de bono mensual y número de subordinados. Sobrescribe el método calcularSalarioMensual() para que incluya el bono en el salario.</br>Para la clase Vendedor, agrega las propiedades de comisión mensual y ventas mensuales. Sobrescribe el método calcularSalarioMensual() para calcular el salario base más la comisión en función de las ventas.</br>Finalmente, en la clase principal (Main), crea instancias de varios empleados, incluyendo gerentes y vendedores, y calcula sus salarios mensuales. Luego, muestra los detalles de todos los empleados y resalta quiénes ganaron más de $5,000 al mes.</br>Este ejercicio permite practicar la herencia, la sobrescritura de métodos y el uso de clases abstractas o interfaces para representar a los empleados y calcular sus salarios. | [Solución](https://github.com/CaroBima/Vates-Java-Intermedio/tree/main/src/main/java/com/curso/clase7/java8/gestionEmpleados) |
 | 9 | Cálculo de Impuestos con Streams, Lambdas y Operaciones Ternarias.</br>Crea una clase CalculadorImpuestos que contenga un programa principal (main). En este programa, tienes una lista de montos representados como valores decimales en dólares (por ejemplo, 1000.0, 2500.0, 800.0, 4500.0, ...., 4567.00) almacenados en una lista. </br>Debes utilizar Java 8 Streams, expresiones lambda y operaciones ternarias para realizar el cálculo de impuestos sobre los montos de la siguiente manera:</br>- Si el monto es igual o menor a $1000, se aplica una tasa de impuestos del 17%. </br>- Si el monto es mayor a $1000, se aplica la misma tasa de 17% y sobre el resultado una tasa de impuestos adicional del 5%. | [Solución](https://github.com/CaroBima/Vates-Java-Intermedio/tree/main/src/main/java/com/curso/clase9/interfaces/funcionales/calculadorImpuestos) |
 
+## Ejercicios extra
+| Clase|                                                          Solicitado                                                  |                                                                                                Solución                                                                                         |
+|:---:|:--------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|  1  | -Supongamos que estás desarrollando un programa para una tienda en línea que vende productos electrónicos. Tienes una lista de objetos Producto que representan los productos en stock. Cada objeto Producto  tiene los siguientes atributos:<br/> - nombre (String): El nombre del producto.<br/> - precio (double): El precio del producto.<br/> - categoria (String): La categoría a la que pertenece el producto (por ejemplo, "smartphone", "laptop", "tablet", etc.).<br/> - disponible (boolean): Un indicador de si el producto está disponible para la venta.<br/>Tu tarea es realizar las siguientes operaciones utilizando programación funcional:<br/>-Filtrar los productos disponibles y que pertenecen a la categoría "smartphone".<br/>-Calcular el precio promedio de los smartphones disponibles.<br/>-Crear una lista de los nombres de los smartphones disponibles y ordenarla alfabéticamente.<br/>-Eliminar los nombres duplicados de los smartphones disponibles.<br/>-Contar cuántos smartphones únicos están disponibles.<br/>-Imprimir en la consola los nombres de los smartphones disponibles en orden alfabético. | [Solución](https://github.com/CaroBima/Vates-Java-Intermedio/tree/main/src/main/java/com/curso/practicasChatGpt/tiendaOnline)                |
