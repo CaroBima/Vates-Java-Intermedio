@@ -45,7 +45,6 @@ public class Principal {
         });
 
 
-
         //Calcular el promedio de precios de los smartphones disponibles
         double promedioPrecios = smartphonesDisponibles.stream()
                 .mapToDouble(Producto::getPrecioProducto)
