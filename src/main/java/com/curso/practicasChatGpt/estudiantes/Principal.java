@@ -1,6 +1,6 @@
 package com.curso.practicasChatGpt.estudiantes;
 
-import java.sql.SQLOutput;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -82,10 +82,24 @@ public class Principal {
         for (Estudiante estudiante : estudiantesConCalificacionMaxima) {
             System.out.println("Nombre: " + estudiante.nombre);
             System.out.println("Calificación: " + estudiante.calificacion);
+            System.out.println("Edad: " + estudiante.getEdad());
             System.out.println("------------------------------------------");
         }
 
         //Crear una lista de nombres de estudiantes que tienen calificaciones por encima del promedio calculado en el paso 2.
+        List<Estudiante> estudSuperanPromedio = listaEstudiantes.stream()
+                .filter(estudiante -> estudiante.getCalificacion() > promedio)
+                .collect(Collectors.toList());
+
+        System.out.println("*************************************************");
+        System.out.println("Estudiantes con calificación encima del promedio:");
+        System.out.println("*************************************************");
+        for( Estudiante estudiante : estudSuperanPromedio){
+            System.out.println("Nombre: " + estudiante.nombre);
+            System.out.println("Calificación: " + estudiante.calificacion);
+            System.out.println("Edad: " + estudiante.getEdad());
+            System.out.println("------------------------------------------");
+        }
 
     }
 
