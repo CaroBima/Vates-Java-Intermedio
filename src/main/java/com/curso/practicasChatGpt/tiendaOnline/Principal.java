@@ -71,12 +71,27 @@ public class Principal {
                 .sorted()
                 .collect(Collectors.toList());
 
-
-        System.out.print("Lista de smarthpones ordenada alfabeticamente: ");
+        //Imprimir en la consola los nombres de los smartphones disponibles en orden alfabético.
+        System.out.print("Lista de nombres de smarthpones ordenada alfabeticamente: ");
         disponiblesOrdenados.forEach(producto -> {
                     System.out.print(producto + ", ");
         });
 
+        //Eliminar los nombres duplicados de los smartphones disponibles.
+        List<Producto> listaUnicos = listaProductos.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println("\nLista de equipos sin repeticiones: ");
+        listaUnicos.forEach(producto -> {
+            System.out.println("Nombre: " + producto.getNombreProducto());
+            System.out.println("Precio: " + producto.getPrecioProducto());
+            System.out.println("Categoría: " + producto.getCategoria());
+            System.out.println("Disponible: " + producto.isDisponible());
+            System.out.println("*******************************");
+        });
+
+        System.out.println("Total de dispostivos unicos: " + listaUnicos.stream().count());
     }
 
 
@@ -117,24 +132,19 @@ public class Principal {
         listaProductos.add(cargaProducto);
 
         cargaProducto= new Producto();
-        cargaProducto.setNombreProducto("Xiaomi modelo pulenta");
-        cargaProducto.setPrecioProducto(250500.50);
-        cargaProducto.setCategoria("Smartphone");
-        cargaProducto.setDisponible(true);
-        listaProductos.add(cargaProducto);
-
-        cargaProducto= new Producto();
         cargaProducto.setNombreProducto("Nokia 1100");
         cargaProducto.setPrecioProducto(150500.50);
         cargaProducto.setCategoria("Smartphone");
         cargaProducto.setDisponible(false);
         listaProductos.add(cargaProducto);
+        listaProductos.add(cargaProducto);
 
         cargaProducto= new Producto();
         cargaProducto.setNombreProducto("Xiaomi modelo pulenta");
         cargaProducto.setPrecioProducto(250500.50);
         cargaProducto.setCategoria("Smartphone");
         cargaProducto.setDisponible(true);
+        listaProductos.add(cargaProducto);
         listaProductos.add(cargaProducto);
 
         cargaProducto= new Producto();
@@ -149,6 +159,7 @@ public class Principal {
         cargaProducto.setPrecioProducto(1250500.50);
         cargaProducto.setCategoria("Smartphone");
         cargaProducto.setDisponible(true);
+        listaProductos.add(cargaProducto);
         listaProductos.add(cargaProducto);
     }
 }
