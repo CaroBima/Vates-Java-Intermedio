@@ -47,13 +47,15 @@ public class Practica {
         Double promedio = fechasNacimiento.stream()
                 .mapToInt(fechaNac -> Period.between(fechaNac, LocalDate.now()).getYears())
                 .average()
-                .orElse(0.0);
+                .orElse(0.0); //devuelve un Optional, puede devolverlo vacio si esta vacia la lista, entonces para evitar un null pointer se hace el orElse mandando cero
 
         System.out.println("El promedio de edades es de " + promedio + " años");
 
         //calcular horas de trabajo entre dos fechas por ejemplo
+
+        //
     }
-    
+
 
     //calcula dos fechas y la muestra en pantalla
     public static long diferenciaFechas(LocalDate fecha1, LocalDate fecha2){
