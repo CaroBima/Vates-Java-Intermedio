@@ -23,8 +23,8 @@ public class PrincipalEj5 {
     public static void main(String[] args) {
         List<Double> montos = Arrays.asList(1000.0, 2500.0, 800.0, 4500.0, 250.0, 4567.00, 357.25, 9000.0, 800.5, 850.0, 150.0, 450.7, 2500.5, 235.0, 4550.2, 532.0, 456.22,1500.0, 3255.5);
 
-        CalculadorImpuestos impuestoSinGanancia = monto -> monto + (monto * 0.17);
-        CalculadorImpuestos impuestoConGanancia = monto -> (monto + (monto * 0.17)) + (monto * 0.17)*0.05;
+        CalculadorImpuestos impuestoSinGanancia = monto -> monto - (monto * 0.17);
+        CalculadorImpuestos impuestoConGanancia = monto -> monto - ((monto * 0.17)*0.05);
 
         //ejemplo visto en clase
         double salarioConDescuentos = impuestoSinGanancia.calcularImpuestos(350000);

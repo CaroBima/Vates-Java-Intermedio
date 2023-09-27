@@ -69,6 +69,7 @@ public class Principal {
         });
     }
 
+
     /**
      * Método que carga la lista con datos de ejemplo para trabajar
      * @param empleados
