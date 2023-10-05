@@ -23,6 +23,15 @@ public class BusquedaYOrdenacionMain {
                     int index= Collections.binarySearch(list, 6);
                     return (index >= 0) ? Optional.of(list.get(index)): Optional.empty();
                 }));
+
+        //Ordenacion burbuja
+        numeros.sort((a,b)-> a.compareTo(b));
+
+        //algortimo de insercion
+        numeros.sort((a,b)-> a.compareTo(b));
+
+
+
     }
 
 }

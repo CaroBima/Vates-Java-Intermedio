@@ -51,9 +51,7 @@ public class Practica {
 
         System.out.println("El promedio de edades es de " + promedio + " años");
 
-        //calcular horas de trabajo entre dos fechas por ejemplo
 
-        //
     }
 
 
